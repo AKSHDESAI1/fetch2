@@ -28,30 +28,12 @@ const getDataFunc = async () => {
               <p class="card-text text-center">
               ${item.desc}
               </p>
-              <button id=${item._id} class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal${item._id}">Edit</button>
+              <button id=${item._id} class="btn btn-primary">Edit</button>
               <a href="#" id=${item._id} class="btn btn-danger" onclick="deleteData(this.id)">Delete</a>
             </div>
           </div>
         </div>
         
-        <div class="modal fade" id="exampleModal${item._id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-      <form onsubmit="handleForm()">
-      <div class="mb-3">
-        <label for="title" class="form-label"><b>Title</b></label>
-        <input type="text" class="form-control" id="title" value=${item.title} required />
-      </div>
-      <div class="mb-3">
-        <label for="desc" class="form-label"><b>Description</b></label>
-        <input type="text" class="form-control" id="desc" vlaue=${item.desc} required />
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    </div>
-  </div>
-</div>
             `
       getdata.innerHTML = str;
     })
@@ -74,6 +56,7 @@ const deleteData = async (id) => {
   } catch (error) {
     console.log('err', error);
   }
+  getDataFunc()
 }
 
 const handleForm = async () => {
