@@ -44,7 +44,7 @@ const getDataFunc = async () => {
 
 const deleteData = async (id) => {
   getdata.innerHTML = `<div id="img" class="text-center">
-  <img src="/img/loading.gif" alt="">
+  <img src="/fetch2/img/loading.gif" alt="">
 </div>`
   try {
     const res = await fetch(`https://aksh5.herokuapp.com/student/${id}`, {
