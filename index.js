@@ -59,7 +59,7 @@ const deleteData = async (id) => {
   getDataFunc()
 }
 
-const handleForm = async () => {
+const handleForm = async (e) => {
   getdata.innerHTML = `<div id="img" class="text-center">
   <img src="/fetch2/img/loading.gif" alt="">
 </div>`
