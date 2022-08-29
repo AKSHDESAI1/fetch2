@@ -60,7 +60,7 @@ const deleteData = async (id) => {
 
 const handleForm = async () => {
   getdata.innerHTML = `<div id="img" class="text-center">
-  <img src="/img/loading.gif" alt="">
+  <img src="/fetch2/img/loading.gif" alt="">
 </div>`
   let title1 = document.getElementById("title").value;
   let desc1 = document.getElementById("desc").value;
